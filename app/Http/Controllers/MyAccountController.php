@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Order;
 use App\Models\Item;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
 
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
@@ -32,10 +33,11 @@ class MyAccountController extends Controller {
         return view('myaccount.balance')->with("viewData", $viewData);
     }
 
-    public function update_balance() {
+    public function update_balance(Request $request) {
 
-        $balance = Auth::user()->getBalance() * $request->input("importo");
+        $balance = Auth::user()->getBalance() + $request->input("importo");
         Auth::user()->setBalance($balance);
+        Auth::user()->save();
 
         return back();
     }

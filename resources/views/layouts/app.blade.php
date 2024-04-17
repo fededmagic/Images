@@ -30,6 +30,7 @@
           
           @if(Auth::user())
           <a class="nav-link active" href="{{route('cart.index')}}">Cart</a>
+          <a class="nav-link active" href="{{route('myaccount.balance')}}">Balance</a>
           @endif
 
           @guest
