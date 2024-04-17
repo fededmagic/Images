@@ -31,6 +31,7 @@ class CartController extends Controller {
 
         $viewData["images"] = $imagesDetail;
         $viewData["total"] = $totale;
+        $viewData["update_balance"] = Auth::user()->getBalance() - $totale;
 
         return view("cart.index")->with("viewData", $viewData);
     }

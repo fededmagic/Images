@@ -53,7 +53,13 @@
 
                 
                 <div class = "col text-start">
+
                     <a class = "btn btn-outline-secondary mb-2">Totale: {{ $viewData["total"] }}</a>
+
+                    @if($viewData["update_balance"] < 0) 
+                        <a href = "{{ route("myaccount.balance") }}" class = "btn">Aggiungi fondi</a>
+                    @endif
+
                 </div>
 
                 <div class = "col text-end">
