@@ -63,6 +63,7 @@ class AdminImagesController extends Controller{
         $image->setName($request->input("name"));
         $image->setDescription($request->input("description"));
         $image->setValue($request->input("value"));
+        $image->setAvailability($request->input("availability", 1));
 
         $image->save();
 

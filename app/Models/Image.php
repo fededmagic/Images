@@ -23,6 +23,7 @@ class Image extends Model
     public function getDescription() { return $this->attributes['description']; }
     public function getUrl() { return $this->attributes['url']; }
     public function getValue() { return $this->attributes['value']; }
+    public function getAvailability() { return $this->attributes['availability']; }
     public function getCreatedAt() { return $this->attributes['created_at']; }
     public function getUpdatedAt() { return $this->attributes['updated_at']; }
 
@@ -31,6 +32,7 @@ class Image extends Model
     public function setDescription($description) { $this->attributes['description'] = $description; }
     public function setUrl($url) { $this->attributes['url'] = $url; }
     public function setValue($value) { $this->attributes['value'] = $value; }
+    public function setAvailability($availability) { $this->attributes['availability'] = $availability; }
     public function setCreatedAt($created_at) { $this->attributes['created_at'] = $created_at; }
     public function setUpdatedAt($updated_at) { $this->attributes['updated_at'] = $updated_at; }
 

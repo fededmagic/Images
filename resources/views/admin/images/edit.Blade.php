@@ -86,6 +86,19 @@
                     <div class = "mb-3 row">
 
                         <div class = "col-lg-10 col-md-6 col-sm-12">
+                            <input type = "checkbox" class = "form-check-input" name = "ckb" value = 0>
+                            <label>Disabilita</label>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class = "row">
+                <div classs = "col">
+                    <div class = "mb-3 row">
+
+                        <div class = "col-lg-10 col-md-6 col-sm-12">
                             <button name = "btnSubmit" class = "btn btn-primary">Salva</button>
                         </div>
 
