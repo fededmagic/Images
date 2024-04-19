@@ -19,7 +19,7 @@ class ImagesController extends Controller {
 
         $viewData['title'] = 'Lista immagini';
         $viewData['subtitle'] = 'Lista immagini';
-        $viewData['images'] = Image::all();
+        $viewData['images'] = Image::where("availability", 1)->get();
         
         return view('images.index')->with('viewData', $viewData);
     }

@@ -86,7 +86,11 @@
                     <div class = "mb-3 row">
 
                         <div class = "col-lg-10 col-md-6 col-sm-12">
-                            <input type = "checkbox" class = "form-check-input" name = "ckb" value = 0>
+                            <input type = "checkbox" class = "form-check-input" name = "availability" value = 0
+                            @if($viewData["image"]->getAvailability() == false)
+                                checked
+                            @endif
+                            >
                             <label>Disabilita</label>
                         </div>
 

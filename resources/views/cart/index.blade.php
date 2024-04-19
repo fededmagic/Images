@@ -75,6 +75,10 @@
 
                     <div class = "col-auto">
                         <button type = "submit" class = "btn bg-primary text-white mb-2">Acquista</button>
+
+                        @if($viewData["update_balance"] < 0) 
+                            <a href = "{{ route("myaccount.balance") }}" class = "btn bg-danger text-white mb-2">Aggiungi fondi</a>
+                        @endif
                     </div>
 
                 </div>
